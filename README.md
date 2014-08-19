@@ -23,7 +23,6 @@ own best practices and coding/design principles.
  
 ### Valid config file ###
 ```
- 
 # This is what a comment looks like, ignore it
 # All these config lines are valid
 host = test.com
@@ -40,7 +39,7 @@ send_notifications = yes
 
 ### Usage ###
 ```ruby
-config = ConfigStore.new('my_config_file.txt')
+config = ConfigStore.new
 
 puts config.debug_mode # Prints 'false' given the example config file above
 ```
