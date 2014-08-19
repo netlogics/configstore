@@ -60,8 +60,3 @@ class ConfigStore
   parse
 end
 
-config = ConfigStore.new
-puts "debug_mode: #{config.debug_mode.class.name}"
-puts "server_id: #{config.server_id.class.name}"
-
-
