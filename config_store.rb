@@ -1,8 +1,6 @@
 require 'bigdecimal'
 
 class ConfigStore
-  attr_reader :config
-
 
   def self.parse(filename="#{File.expand_path(File.dirname(__FILE__))}/config/settings.txt")
     config = File.open(filename, "r").read
