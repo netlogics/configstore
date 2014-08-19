@@ -59,7 +59,7 @@ describe "ConfigStore" do
       expect(value).to eq("100".to_i)
     end
 
-    it "should convert an float string to a float" do
+    it "should convert a float string to a float" do
       value = config_store.send(:make_numeric, "100.0")
       expect(value).to eq("100.0".to_f)
     end
