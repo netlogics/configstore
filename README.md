@@ -50,7 +50,7 @@ puts config.debug_mode # Prints 'false' given the example config file above
 $ rspec --color config_store_spec.rb
 ..........
 
-Finished in 0.00358 seconds
-10 examples, 0 failures
+Finished in 0.00467 seconds
+8 examples, 0 failures
 
 ```
