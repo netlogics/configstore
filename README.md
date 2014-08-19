@@ -40,19 +40,14 @@ send_notifications = yes
 
 ### Usage ###
 ```ruby
-appConfig = ConfigReader.new('my_config_file.txt')
+config = ConfigStore.new('my_config_file.txt')
 
-verbose_mode = appConfig['verbose']
-
-puts verbose_mode # Prints 'true' given the example config file above
+puts config.debug_mode # Prints 'false' given the example config file above
 ```
 
 ### Running the tests ###
-
-Make sure you have rspec installed with `gem install rspec`.
-
 ```
-$ rspec --color config_reader_spec.rb
+$ rspec --color config_store_spec.rb
 ..........
 
 Finished in 0.00358 seconds
