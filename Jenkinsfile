@@ -10,8 +10,11 @@ pipeline {
     stage('deliver') {
       steps {
         script {
-          def myVar = build.getEnvironment(listener).get('WORKSPACE')
-          echo myVar
+          def build = this.getProperty('binding').getVariable('build')
+          def listener = this.getProperty('binding').getVariable('listener')
+          def env = build.getEnvironment(listener)
+          println env.MY_VARIABLE
+
           def server = Artifactory.server 'artifactory'
           def uploadSpec = """{
             "files": [
