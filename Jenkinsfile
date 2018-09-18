@@ -10,13 +10,16 @@ pipeline {
     stage('deliver') {
       steps {
         script {
-
           def server = Artifactory.server 'artifactory'
           def uploadSpec = """{
             "files": [
               {
                 "pattern": "${env.WORKSPACE}/Jenkinsfile",
                 "target": "configstore-pipeline"
+              },
+              {
+                "pattern": "${env.WORKSPACE}/config_store.rb",
+                "target": "configstore-pipeline/src/"
               }
             ]
           }"""
