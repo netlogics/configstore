@@ -15,10 +15,10 @@ pipeline {
           def uploadSpec = """{
             "files": [
               {
-                "pattern": "*",
+                "pattern": "Jenkinsfile",
                 "target": "configstore-pipeline"
               }
-          ]
+            ]
           }"""
           def buildInfo = server.upload(uploadSpec)
           buildInfo.env.capture = true
