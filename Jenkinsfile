@@ -10,7 +10,7 @@ pipeline {
     stage('deliver') {
       steps {
         script {
-          echo $WORKSPACE
+          echo ${WORKSPACE}
           def server = Artifactory.server 'artifactory'
           def uploadSpec = """{
             "files": [
